@@ -1,0 +1,53 @@
+{
+  "name": "webpack-loader-clean-pragma",
+  "version": "1.0.0",
+  "description": "Webpack loader to remove console logs and parts of codes using special comments called pragmas.",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "reinstallNodeModules": "rm -rf node_modules package-lock.json && npm i",
+    "webpack": "rm -rf build && webpack --config=webpack.config.js && clear && node build/main.js",
+    "precommit": "lint-staged"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:aprilmintacpineda/webpack-loader-clean-pragma.git"
+  },
+  "keywords": [
+    "webpack-loader",
+    "webpack",
+    "strip-code",
+    "remove-code",
+    "clean-code",
+    "comment-pragma"
+  ],
+  "author": "April Mintac Pineda",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/cli": "^7.1.5",
+    "@babel/core": "^7.1.5",
+    "@babel/node": "^7.0.0",
+    "@babel/preset-env": "^7.1.5",
+    "@babel/preset-flow": "^7.0.0",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-eslint": "^10.0.1",
+    "babel-loader": "^8.0.4",
+    "babel-preset-minify": "^0.5.0",
+    "eslint": "^5.9.0",
+    "husky": "^1.1.3",
+    "jest": "^23.6.0",
+    "lint-staged": "^8.0.4",
+    "prettier": "^1.15.1",
+    "webpack-cli": "^3.1.2"
+  },
+  "dependencies": {
+    "webpack": "^4.25.1"
+  },
+  "lint-staged": {
+    "*.js": [
+      "prettier --write",
+      "eslint --fix",
+      "git add"
+    ]
+  }
+}
