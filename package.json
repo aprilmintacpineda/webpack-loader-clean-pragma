@@ -1,6 +1,6 @@
 {
   "name": "webpack-loader-clean-pragma",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Webpack loader to remove console logs and parts of codes using special comments called pragmas.",
   "main": "index.js",
   "files": [
